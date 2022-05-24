@@ -74,6 +74,7 @@ public class HospitalController {
 
 	@RequestMapping(value = "/createHospital", method = RequestMethod.GET)
 	public String createHospital(Model model) {
+		hmsLogger.info("createHospital page");
 		HospitalVo hospitalVo = new HospitalVo();
 		List<DistrictVo> districtList = hospitalService.getDistrictByStateId();
 		hospitalVo.setDistrictList(districtList);
